@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Who did the Ice Bucket Challenge?</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+	<style>
+		{% load staticfiles %}
+		body { 
+			background: url("{{MEDIA_URL}}ice-bucket.jpg") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover; 
+		}
+		h1, h3, label { 
+			color: white;
+		}
+		a:link.menu, a:hover.menu , a:visited.menu , a:active.menu  {
+			color: white;
+		}
+		.menu, .errorlist {
+			color: white;
+		}
+	</style>
+</head>
+<body class="container">
+{% block content %}
+{% endblock %}
+</body>
+</html>

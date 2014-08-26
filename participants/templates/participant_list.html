@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>People who did the Ice Bucket Challenge</h1>
+<a class="menu" href="/new"><h3>Add New</h3></a>
+<ul class="list-group">
+  {% for participant in object_list %}
+    <li class="list-group-item col-md-4">
+    <div class="panel panel-default">
+	    <div class="panel-heading"><a href="{% url 'participant_detail' participant.id%}">{{ participant.first_name}} {{participant.last_name }} - {{participant.profession}}</a></div>
+	    <div class="panel-body embed-responsive embed-responsive-4by3"><iframe class="embed-responsive-item" src="//youtube.com/embed/{{ participant.youtube_video }}"></iframe></div>
+    </div>
+    </li>
+  {% endfor %}
+</ul>
+{% if is_paginated %}
+    <div class="pagination row">
+        <span class="page-links">
+            {% if page_obj.has_previous %}
+                <a class="menu" href="/?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+            <span class="page-current">
+                <span class="menu" >{{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+            </span>
+            {% if page_obj.has_next %}
+                <a class="menu" href="/?page={{ page_obj.next_page_number }}">Next</a>
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
+{% endblock %}

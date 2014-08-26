@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<ul class="nav nav-pills">
+	<li><a class="menu"  href="/"><h3>Home</h3></a></li>
+	<li><a class="menu"  href="/new"><h3>Add New</h3></a></li>
+</ul>
+<div class="row">
+	<div class="col-md-offset-4 col-md-8"><h3>Name: <strong>{{object.first_name}} {{object.last_name}}</strong></h3></div>
+	<div class="col-md-offset-4 col-md-8"><h3>Profession: <strong>{{object.profession}}</strong></h3></div>
+	<div class="col-md-offset-4 col-md-8"><h3>Date challenge: <strong>{{object.date_did_challenge}}</strong></h3></div>
+	<div class="col-md-offset-4 col-md-8"><h3>Date added: <strong>{{object.date_created}}</strong></h3></div>
+	<div class="col-md-offset-3">
+		<iframe width="560" height="315" src="//www.youtube.com/embed/{{object.youtube_video}}" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+{% endblock %}
