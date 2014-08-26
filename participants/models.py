@@ -11,3 +11,9 @@ class Participant(models.Model):
 
 	class Meta:
 		ordering = ['last_name']
+
+	def __str__(self):
+		return '{0}, {1}'.format(self.last_name, self.first_name)
+
+	def __unicode__(self):
+		return u'{0}, {1}'.format(self.last_name, self.first_name)		
