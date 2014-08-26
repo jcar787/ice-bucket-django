@@ -9,6 +9,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'ibs_site.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^army_navy_of_two/', include(admin.site.urls)),
     url(r'', include('participants.urls')),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

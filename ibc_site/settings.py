@@ -32,6 +32,7 @@ INSTALLED_APPS = (
 
     #third-party apps
     'south',
+    'captcha'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,3 +101,6 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 STATICFILES_DIRS = (
 )
+
+RECAPTCHA_PUBLIC_KEY = '6LfOLvkSAAAAAM36EP4WmMy12YhDY_hyHKw0nIOr'
+RECAPTCHA_PRIVATE_KEY = '6LfOLvkSAAAAANgHvY8_x12m0JLzvan-WsRAUs8a'
