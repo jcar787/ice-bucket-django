@@ -2,13 +2,19 @@
 <head>
 	<title>Empty Bucket - 404</title>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+			body { 
+			background: url("{{STATIC_URL}}empty-bucket.jpg") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover; 
+		}
 
 </head>
 <body class="container">
 	<div class="row">
 		<h1 class="col-md-offset-1">Your ice bucket is empty. It doesn't exist, 404!</h1>
 		<a href="/"><h1 class="col-md-offset-4">Go Home!</h1></a>
-		<img src="{{STATIC_URL}}empty-bucket.jpg" />
 	</div>
 </body>
 </html>
