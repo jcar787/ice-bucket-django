@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+# not sending to public repo
+keys.py
+
 # C extensions
 *.so
 

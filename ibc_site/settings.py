@@ -1,5 +1,6 @@
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from keys import Keys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -7,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ml@5xn1gl@2^&wfre%uvv*&($b$^(ajc!(i80%lg^8b#mhxwb&'
+SECRET_KEY = Keys.secret
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -102,5 +103,5 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 STATICFILES_DIRS = (
 )
 
-RECAPTCHA_PUBLIC_KEY = '6LfOLvkSAAAAAM36EP4WmMy12YhDY_hyHKw0nIOr'
-RECAPTCHA_PRIVATE_KEY = '6LfOLvkSAAAAANgHvY8_x12m0JLzvan-WsRAUs8a'
+RECAPTCHA_PUBLIC_KEY = Keys.recaptcha_public
+RECAPTCHA_PRIVATE_KEY = Keys.recaptcha_private
